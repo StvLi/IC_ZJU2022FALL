@@ -45,6 +45,32 @@ while ( precStep*Ts<Tt )   %   run in loop
 end
 disp('Simulation DONE');
 
-% plot
-plot(t,y(1,:)*180/pi,t,ur);
-legend('Angle / °','Controller Output / N');
+%   plot
+%       time domain
+subplot(4,1,1);
+plot(t,sr);
+legend('Control State');
+
+subplot(4,1,2);
+plot(t,ur);
+legend('Controller Output / N');
+
+subplot(4,1,3);
+plot(t,y(1,:)*180/pi);
+legend('Angle / °');
+
+subplot(4,1,4);
+plot(t,y(2,:)*180/pi);
+legend('Angular Velocity / °/s');
+
+% %       state space
+% plot(abs(y(1,:)*180/pi),abs(y(2,:)*180/pi))
+% hold on
+% plot(30*ones(700,1),1:700)
+% hold on
+% plot(90*ones(700,1),1:700)
+% hold on
+% plot(90:180,180*ones(91,1))
+% hold on
+% plot(1:30,60*ones(30,1))
+% legend('State Trajectory');
