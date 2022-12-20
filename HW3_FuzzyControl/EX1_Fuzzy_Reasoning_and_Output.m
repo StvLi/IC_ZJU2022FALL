@@ -1,7 +1,7 @@
 %   Fuzzy Reasoning & Output
 %   IC_ZJU2022FALL_HW3_1
 %   Reasoning (A,B)→C
-%   created bby StvLi LiPeize 2022-12-17
+%   created by StvLi LiPeize 2022-12-17
 %       Reasonin: max-min
 %       Output  : Mamdani
 clear;  clc;
@@ -43,5 +43,5 @@ for i = 1:3
     deno = deno + sum(temp);
 end
 y = nume/deno;
-disp("y = ")
+disp("output = ")
 disp(y)
